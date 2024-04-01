@@ -1,4 +1,9 @@
 function solution(n) {
-  let answer = Math.ceil(n / (1 * 7));
-  return answer;
+  let pizzaBox = 6;
+  // 같은 수로 나눠질 때까지 +6
+  while (pizzaBox % n !== 0) {
+    pizzaBox += 6;
+  }
+
+  return pizzaBox / 6;
 }
